@@ -162,28 +162,27 @@
                     <div class="panels ">
                     </div>
                     <div class="panels drink1" id="panel1">
-                        <img class="drinks" src="assets/huerenaffdrink.png" alt="">
-                        <img class="hidden" id="inner1" src="assets/aff_hidden.png" alt="">
+                        <img class="drinks" src="assets/kaffeehuerenaff.png" alt="">
+                        <img class="hidden" id="inner1" src="assets/kaffeehuerenaff_hidden.png" alt="">
 
 
                     </div>
                     <div class="panels drink2">
 
-                        <img class="drinks" src="assets/holdriodrink.png" alt="">
+                        <img class="drinks" src="assets/holdrio.png" alt="">
                         <img class="hidden" id="inner1" src="assets/holdrio_hidden.png" alt="">
 
                     </div>
                     <div class="panels">
+                        <img class="drinks" src="assets/mönzezwetschge.png" alt="">
+                        <img class="hidden" id="inner1" src="assets/mönzezwetschge_hidden.png" alt="">
 
-                        <img class="drinks" src="assets/minzzwetschge.png" alt="">
-                        <img class="hidden" id="inner1" src="assets/minze_hidden.png" alt="">
 
                     </div>
 
                     <div class="panels">
-
                         <img class="drinks" src="assets/hexentee.png" alt="">
-                        <img class="hidden" id="inner1" src="assets/hexe_hidden.png" alt="">
+                        <img class="hidden" id="inner1" src="assets/hexentee_hidden.png" alt="">
 
                     </div>
 
@@ -377,15 +376,17 @@
 
         .hey2wrapper {
             text-align: right;
+            width:100vw;
+            height:auto;
 
         }
 
         .hey2 {
-            width:96%;
-            padding-left: 5px;
-            padding-right: 5px;
-
-
+            width: 33vw;
+            height:auto;
+            max-height:500px;
+            padding-left: 30px;
+            padding-right: 30px;
             font-size: 12.2vw;
             text-align: left;
             font-size: 12.2vw;
@@ -505,6 +506,7 @@
             width: 100vw;
             height: 100vh;
             overflow:hidden;
+
 
         }
 
@@ -691,11 +693,10 @@ z-index:1000;
 
         .drinks {
             position: relative;
-            width: auto;
-            height: 70%;
-            margin-left: auto;
+            width: 80%;
+            height: auto;
+            margin-left: 0;
             margin-right: auto;
-            padding-top: 25%;
             z-index:801;
         }
 
@@ -705,10 +706,9 @@ z-index:1000;
             position: absolute;
             width: 80%;
             height: 85%;
-            padding-top: 5%;
-            margin-left: 18%;
+            margin-left:auto;
             margin-right: auto;
-            z-index:800;
+            z-index:802;
             opacity:0;
         }
 
@@ -924,7 +924,9 @@ z-index:1000;
 
 
         gsap.to(".hey2", {
-            x: "-107%",
+            x: "-102%",
+            maxHeight: "500px",
+            height: "auto",
             opacity: 1,
 
             color: "white",
@@ -1142,7 +1144,7 @@ function stopBarSound(){
             scrollTrigger: {
                 trigger: ".container",
                 pin: ".container",
-                start: "center 60%",
+                start: "center 70%",
                 scrub: 1,
                 markers: true,
                 pinSpacing: true,
