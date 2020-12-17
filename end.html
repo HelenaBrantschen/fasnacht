@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <section id="snow-bg">
-        <img src="assets/snow_bg.gif">
+    <section class="section-wrapper">
+    <section id="spring-bg">
+        <img src="assets/spring_bg.gif">
     </section>
     <div class="section-wrapper" id="section-one">
 
@@ -25,6 +26,15 @@
                 Tauche ein in die wichtigsten Ereignisse der Luzerner Fasnacht. </p>
         </section>
     </div>
+    <div class="audio-icon">
+        <img class="hide" src="assets/Sound_off.png" id="sound-off" onclick= audioplay>
+        <img src="assets/Sound_on.png" id="sound-on" onclick=audiopause >
+        <audio autoplay>
+            <source src="assets/spring_sound.mp3" type="audio/mpeg" id="sound">
+            Your browser does not support the audio element.
+          </audio>
+    </div>
+</section>
 
 
     <style>
@@ -61,7 +71,50 @@ h4{
             height: 77vh;
 
         }
+
+        .audio-icon {
+            margin-left: 15vw;
+            width: 4.4vw;
+            height: 4.4vw;
+        }
+        .hide{
+    display: none;
+
+}
+#spring-bg{position:absolute;
+width:100vw;
+height:100vh;
+z-index:-1;
+}
+#spring-bg > img {
+    position:relative;
+  width:100%;
+  height:100%;
+}
+
+
+
     </style>
+    <script>
+         var off = document.getElementById("sound-off");
+        var on = document.getElementById("sound-on");
+        var sound =document.getElementById("sound");
+        soundcont = new Audio(sound);
+        function audiopause() {
+            
+        soundcont.pause();
+        on.addClass("hide");
+        off.removeClass("hide");
+
+      }
+      function audioplay() {
+      
+
+        soundcont.play();
+        off.addClass("hide")
+        on.removeClass("hide")
+      }
+    </script>
 
 </body>
 
