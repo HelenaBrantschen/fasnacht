@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasnacht2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+<a href="Moodboard.html">Moodboard/Content</a>
+<a href="index.html">Back to Project</a>
+
+
+
+
+    <section class="dialogue-wrapper">
+        <p class="dialog dialog001">
+        Hey<span class="yellow dialog001">Huerenaff</span> wie gohds?
+        </p>
+        <div class="header-img" onclick="zoomingFace();">
+            <img class="zoominyourface" src="assets/Huerenaff_yellow.png">
+            <img class="zoominyourface" src="assets/Huerenaff_green.png">
+
+        </div>
+    </div>
+        <p class="dialog dialog002">
+            Danke guet ond der <span class="green">Huerenaff</span>?
+        </p>
+
+        <p class=" dialog dialog003">
+            Los mou Huerenaff. Gömmer es <span class="yellow"> Kafi Huerenaff </span>
+            go näh?
+        </p>
+        <p class=" dialog dialog004">
+            Jo Huerenaff. Das esch e <span class="green">Rüüdig gueti </span>Idee.
+        </p>
+
+        <video class="videowrapper" controls>
+            <source class="videocontent" src="assets/getraenke_holen.mp4" type="video/mp4" />
+        </video>
+    </section>
+
+
+    <div class="spacer dialog-wrapper beige">
+        <p class="dialog dialog005">
+            «Oder nehmwer en Tee ?»
+        </p>
+        <p class="dialog dialog006">
+            «nor wenn du Gönnerin wersch!»
+        </p>
+        <p class="dialog dialog007">
+            «onbedengt.»
+        </p>
+        <p class="dialog dialog008">
+            « Met oder ohni Schuss?»
+        </p>
+        <p class="dialog dialog009">
+            «Super, ond was för en Tee wotsch denn?
+        </p>
+    </div>
+
+    <div class="side-scrolling-wrapper">
+
+        <div class="side-scrolling-title">
+
+            <h1 class="fadeInUp">Die Getränkekarte</h1>
+        </div>
+
+
+
+        <div class="container">
+            <div class="panels ">
+
+            </div>
+            <div class="panels drink1">
+                <img class="drinks" src="assets/huerenaffdrink.png" alt="">
+                <img class="hiddena" src="assets/Rectangle_kafi.svg" alt ="">
+                <p class="hiddena hiddentitle">Kafi <br>Huerenaff</p>
+                <img class="hiddenb" src="assets/bgdrinks.png" alt ="">
+                <img class="hiddenb" src="assets/bgkaffeehuerenaff.png" alt ="">
+
+
+            </div>
+            <div class="panels drink2">
+
+                <img class="drinks" src="assets/holdriodrink.png" alt="">
+            </div>
+            <div class="panels">
+
+                <img class="drinks" src="assets/minzzwetschge.png" alt="">
+            </div>
+
+            <div class="panels">
+
+                <img class="drinks" src="assets/hexentee.png" alt="">
+            </div>
+
+            <div class="panels ">
+
+            </div>
+
+
+        </div>
+
+        <div class="spacer"></div>
+
+    </div>
+
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let sections = gsap.utils.toArray(".container .panels");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".side-scrolling-wrapper",
+                pin: true,
+                start: "top +=100px",
+                markers: true,
+                scrub: 1,
+                snap: {
+                    snapTo: 1 / (sections.length - 1),
+                    duration: {
+                        min: 0.2,
+                        max: 0.3
+                    },
+                    delay: 0
+                },
+                // Base vertical scrolling on how wide the container is so it feels more natural.
+                end: () => "+=" + (document.querySelector(".container").offsetWidth / 5)
+            }
+        });
+
+         function  zoomingFace(){
+            zoominginyourface();
+        }
+
+    </script>
+</body>
+
+</html>

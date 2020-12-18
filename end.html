@@ -4,31 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Spring</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <section class="section-wrapper">
     <section id="spring-bg">
         <img src="assets/spring_bg.gif">
-    </section>
-    <div class="section-wrapper" id="section-one">
 
+    </section>
+    <section class="section-wrapper">
+    
+       
+        
         <section class="paragraph-wrapper">
-            <p class="title">Eine Ansage</p>
-            <p class="fliesstext">Leider müssen wir dir mitteilen, dass die Luzerner Fasnacht dieses Jahr nicht vor Ort
-                stattfinden kann. Da der Übergang in den Frühling aber nicht ohne die Vertreibung der Wintergeister
-                erdenklich ist, bieten wir dir hiermit eine exklusive Alternative der traditionellen Zelebrierung.
+            <p class="title">Danke für deine Unterstützung</p>
+            <p class="fliesstext">Mit deiner Hilfe wurden die Wintergeister vertrieben und der Frühling kann nun kommen. Wir hoffen du hattest Spass an der digitalen Luzerner Fasnacht. 
                 <br><br>
-                Dies ist eine besondere Gelegenheit deinen Luzerner Fasnachtswortschatz aufzufrischen und zu erweitern.
-                Tauche ein in die wichtigsten Ereignisse der Luzerner Fasnacht. </p>
-        </section>
-    </div>
-    <div class="audio-icon">
-        <img class="hide" src="assets/Sound_off.png" id="sound-off" onclick= audioplay>
-        <img src="assets/Sound_on.png" id="sound-on" onclick=audiopause >
+                Bewaffnet mit dem neu erlernten oder wieder aufgefrischten Wortschatz bist du bereit für künftige Anlässe. Vielleicht sehen wir uns ja bald wieder. 
+        <br> <br> <span class="allesgute"> Alles Gute wünschen </span>
+        <br> <strong class="allesgute">Fritschi, Grend & Huerenaff </strong> </span>
+    </p>
+            </section>
+        <div class="audio-icon">
+        <img class="hide" src="assets/sound_off_blue.png" id="sound-off-blue" onclick= audioplay>
+        <img src="assets/sound_on_blue.png" id="sound-on-blue" onclick=audiopause >
         <audio autoplay>
             <source src="assets/spring_sound.mp3" type="audio/mpeg" id="sound">
             Your browser does not support the audio element.
@@ -64,13 +65,7 @@ h4{
 
 }
 
-        .section-wrapper {
-            padding-top:23vh;
 
-            width: 100vw;
-            height: 77vh;
-
-        }
 
         .audio-icon {
             margin-left: 15vw;
@@ -81,23 +76,62 @@ h4{
     display: none;
 
 }
-#spring-bg{position:absolute;
+#spring-bg{
 width:100vw;
 height:100vh;
-z-index:-1;
+z-index:-900;
+position:absolute;
+top:0;
+left:0;
+background-color: #fff;
+
+
+
+
 }
 #spring-bg > img {
-    position:relative;
-  width:100%;
+      width:100%;
   height:100%;
+  background-color: #fff;
+opacity:0.7;
+
+ 
 }
 
+.paragraph-wrapper{
+    width:33vw;
+    height:auto;
+    z-index:2;
+    margin-top:10vh;
+}
+.paragraph-wrapper > .title{
+      color:#0C2834;
+      font-size: 53px;
+            line-height: 68px;
+            color: #0C2834;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 40vw;
+            width: 37vw;
+            margin-top: 169px;
 
+}
+.paragraph-wrapper > .fliesstext{
+    font-size: 21.64px;
+    line-height: 28, 75px;
+    margin-left: 33vw;
+    width: 38vw;
+    color:#0C2834;
+
+}
+.allesgute{
+    margin-left:7vw;
+}
 
     </style>
     <script>
-         var off = document.getElementById("sound-off");
-        var on = document.getElementById("sound-on");
+         var off = document.getElementById("sound-off-blue");
+        var on = document.getElementById("sound-on-blue");
         var sound =document.getElementById("sound");
         soundcont = new Audio(sound);
         function audiopause() {

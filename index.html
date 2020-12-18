@@ -4,151 +4,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fasnacht2</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Welcome</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-<a href="Moodboard.html">Moodboard/Content</a>
-<a href ="index.html">First try layout</a>
-<a href="pinning.html">Pinning and scroll trigger</a>
-<a href="pinning2.html">Thursday 3, December </a>
+    <section id="snow-bg">
+        <img src="assets/snow_bg.gif">
+    </section>
+    <div class="section-wrapper"  id="section-one">
+       
+        <section class="paragraph-wrapper">
+            <p class="title">Eine Ansage</p>
+            <p class="fliesstext">Leider müssen wir dir mitteilen, dass die Luzerner Fasnacht dieses Jahr nicht vor Ort
+                stattfinden kann. Da der Übergang in den Frühling aber nicht ohne die Vertreibung der Wintergeister
+                erdenklich ist, bieten wir dir hiermit eine exklusive Alternative der traditionellen Zelebrierung.
+                <br><br>
+                Dies ist eine besondere Gelegenheit deinen Luzerner Fasnachtswortschatz aufzufrischen und zu erweitern.
+                Tauche ein in die wichtigsten Ereignisse der Luzerner Fasnacht. </p>
+        </section>
 
+        <span class="legende">Scroll</span>
+        <div id="pfeil">
 
-
-
-    <section class="dialogue-wrapper">
-        <p class="dialog dialog001">
-        Hey<span class="yellow dialog001">Huerenaff</span> wie gohds?
-        </p>
-        <div class="header-img" onclick="zoomingFace();">
-            <img class="zoominyourface" src="assets/Huerenaff_yellow.png">
-            <img class="zoominyourface" src="assets/Huerenaff_green.png">
-
+            <svg viewBox="0 0 64 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L32.7123 16L58 2" stroke="#F4F1ED" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
         </div>
+        <div class="audio-icon">
+            <img class="hide" src="assets/Sound_off.png" id="sound-off" onclick= audioplay>
+            <img src="assets/Sound_on.png" id="sound-on" onclick=audiopause >
+            <audio autoplay>
+                <source src="assets/winter_sound.mp3" type="audio/mpeg" id="sound">
+                Your browser does not support the audio element.
+              </audio>
+        </div>
+
+        <p class="time-place">
+            <span>11.2 2012 </span>
+            <span class="strong">| 17:00 |</span> 
+            <span>bei dir zuhause</span>
+            </p>
+
     </div>
-        <p class="dialog dialog002">
-            Danke guet ond der <span class="green">Huerenaff</span>?
-        </p>
+    <div class="section-wrapper" id="two" >
+        <section class="paragraph-wrapper">
+            <p class="title">Luzerner Persönlichkeiten</p>
+            <p class="fliesstext">Du hast das Privileg die folgenden drei Berühmtheiten kennen zu lernen. Sie zeigen dir was du an der Fasnacht erleben kannst und wie man am besten Wintergeister vertreibt. Du hast die Qual der Wahl.
+<br> <br>
 
-        <p class=" dialog dialog003">
-            Los mou Huerenaff. Gömmer es <span class="yellow"> Kafi Huerenaff </span>
-            go näh?
-        </p>
-        <p class=" dialog dialog004">
-            Jo Huerenaff. Das esch e <span class="green">Rüüdig gueti </span>Idee.
-        </p>
+            <span class="strong">Tipp: Achte auf ihren Wortschatz. </span>
+            </p>
+        </section>
 
-        <video class="videowrapper" controls>
-            <source class="videocontent" src="assets/getraenke_holen.mp4" type="video/mp4" />
-        </video>
+        <section id="personality-wrapper">
+        <div class="person">
+            <a href="huerenaff.html">
+            <img src="assets/aff_profile.png">
+        </a>
+            <h4>Huerenaff</h4>
+            <p class="fliesstext">Ich zeige dir wie man sich gegenseitig begrüsst und wie man richtig speziellt, neben den  typischen Drinks  zeige ich dir die surreale Welt der Fasnacht in der Nacht und den Monstercorso am folgenden Tag.</p>
+        </div>
+        <div class="person">
+            <a href="">
+            <img src="assets/grend_profile.png">
+            </a>
+            <h4>Grend</h4>
+            <p class="fliesstext">(Coming Soon).</p>
+        </div>
+        <div class="person">
+            <a href="">
+            <img src="assets/fritschi_profile.png">
+            </a>
+            <h4>Fritschi</h4>
+            <p class="fliesstext">(Coming Soon).</p>
+        </div>
+
     </section>
 
 
-    <div class="spacer dialog-wrapper beige">
-        <p class="dialog dialog005">
-            «Oder nehmwer en Tee ?»
-        </p>
-        <p class="dialog dialog006">
-            «nor wenn du Gönnerin wersch!»
-        </p>
-        <p class="dialog dialog007">
-            «onbedengt.»
-        </p>
-        <p class="dialog dialog008">
-            « Met oder ohni Schuss?»
-        </p>
-        <p class="dialog dialog009">
-            «Super, ond was för en Tee wotsch denn?
-        </p>
-    </div>
-
-    <div class="side-scrolling-wrapper">
-
-        <div class="side-scrolling-title">
-
-            <h1 class="fadeInUp">Die Getränkekarte</h1>
-        </div>
-
-
-
-        <div class="container">
-            <div class="panels ">
-
-            </div>
-            <div class="panels drink1">
-                <img class="drinks" src="assets/huerenaffdrink.png" alt="">
-                <img class="hiddena" src="assets/Rectangle_kafi.svg" alt ="">
-                <p class="hiddena hiddentitle">Kafi <br>Huerenaff</p>
-                <img class="hiddenb" src="assets/bgdrinks.png" alt ="">
-                <img class="hiddenb" src="assets/bgkaffeehuerenaff.png" alt ="">
-
-
-            </div>
-            <div class="panels drink2">
-
-                <img class="drinks" src="assets/holdriodrink.png" alt="">
-            </div>
-            <div class="panels">
-
-                <img class="drinks" src="assets/minzzwetschge.png" alt="">
-            </div>
-
-            <div class="panels">
-
-                <img class="drinks" src="assets/hexentee.png" alt="">
-            </div>
-
-            <div class="panels ">
-
-            </div>
-
-
-        </div>
-
-        <div class="spacer"></div>
+        <p class="time-place">
+            <span>11.2 2012 </span>
+            <span class="strong">| 17:00 |</span> 
+            <span>bei dir zuhause</span>
+            </p>
 
     </div>
 
+    <section id="nav">
+        <a href="Moodboard.html">Moodboard/Content</a>
+        <a href="firsttry.html">First try layout</a>
+        <a href="pinning.html">First try Pinning</a>
 
+    </section>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        let sections = gsap.utils.toArray(".container .panels");
-
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".side-scrolling-wrapper",
-                pin: true,
-                start: "top +=100px",
-                markers: true,
-                scrub: 1,
-                snap: {
-                    snapTo: 1 / (sections.length - 1),
-                    duration: {
-                        min: 0.2,
-                        max: 0.3
-                    },
-                    delay: 0
-                },
-                // Base vertical scrolling on how wide the container is so it feels more natural.
-                end: () => "+=" + (document.querySelector(".container").offsetWidth / 5)
-            }
-        });
-
-         function  zoomingFace(){
-            zoominginyourface();
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+            background-color: #0C2834;
+            color: #F4F1ED;
+            font-family: 'Noto Sans', sans-serif;
         }
 
+        body{
+            padding:0;
+            margin:0;
+        }
+
+        p {
+            font-family: 'Noto Sans', sans-serif;
+
+
+        }
+    
+    #nav {
+        
+        display: flex;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 22vw;
+    }
+#nav > a{
+    color: white;
+    text-decoration:none;
+}
+a:hover{color:white;
+}
+h4{
+    font-size: 41px;
+    text-transform:uppercase;
+
+}
+
+.section-wrapper {
+       
+    padding-top: 16vh;
+    width: 100vw;
+    height: 84vh;
+
+
+        }
+
+#two{
+    background-color: rgba(8, 26, 33, 0.84);
+
+    color:#0C2834;
+    height: 150vh;
+}
+#two > .fliesstext{
+    color:#0C2834;
+    margin:1%;
+ 
+}
+#snow-bg{position:absolute;
+width:100vw;
+height:100vh;
+z-index:-1;
+}
+#snow-bg > img {
+    position:relative;
+  width:100%;
+  height:100%;
+}
+
+#section-one{
+    background-color: rgba(8, 26, 33, 0.7);
+
+}
+
+
+        .title {
+
+
+            font-size: 53px;
+            line-height: 68px;
+            color: #F4F1ED;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 40vw;
+            width: 33vw;
+            
+        }
+
+        .fliesstext {
+            font-size: 21.64px;
+    color: #F4F1ED;
+    line-height: 28, 75px;
+    margin-left: 33vw;
+    width: 38vw;
+        }
+    
+
+        .legende {
+            display:block;
+        padding-top:4.4vh;
+            font-size: 18;
+            color: #F4F1ED;
+            margin-left: 49vw;
+
+        }
+
+        .audio-icon {
+            margin-left: 15vw;
+            width: 4.4vw;
+            height: 4.4vw;
+        }
+        .strong{
+            font-weight:900;
+            display:inline;
+
+        }
+        .time-place{
+    color: #F4F1ED;
+    transform: rotate(-90deg);
+    top: 35vh;
+    left: 77vw;
+    font-size: 1.1vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    width: 500px;
+    position: fixed;
+        }
+
+        #sound-off {
+            width: 100%;
+            height: 100%;
+        }
+
+        #sound-on {
+            padding-top:4.4vh;
+            width: 100%;
+            height: 100%;
+        }
+.hide{
+    display: none;
+
+}
+
+        #pfeil {
+            width: 3.6vw;
+            height: 1.1vw;
+            margin-left: 48.4vw;
+            margin-top: 0.5vw;
+        }
+
+#personality-wrapper{
+    display:flex;
+    margin-top:8vw;
+
+    margin-left:13vw;
+    margin-right:13vw;
+
+}
+#personality-wrapper > div > a > img{
+    width:20vw;
+    height:20vw;
+}
+
+
+ .person{ 
+            display:inline-block;
+width:20vw;
+height:auto;
+margin:1.1vw;
+
+}
+.person>h4{
+    padding-top:3vw;
+    margin:1.1vw;
+    color:white;
+}
+.person>p {
+width:17vw;
+margin:1.1vw;}
+
+.person>img{
+    width:20vw;;
+    height:20vw;
+}   
+
+.person>a> img:hover{
+transform:scale(1.1);
+}
+
+
+    </style>
+    <script>
+          var off = document.getElementById("sound-off");
+        var on = document.getElementById("sound-on");
+        var sound =document.getElementById("sound");
+        soundcont = new Audio(sound);
+        function audiopause() {
+            
+        soundcont.pause();
+        on.addClass("hide");
+        off.removeClass("hide");
+
+      }
+      function audioplay() {
+      
+
+        soundcont.play();
+        off.addClass("hide")
+        on.removeClass("hide")
+      }
     </script>
 </body>
 
